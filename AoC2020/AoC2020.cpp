@@ -5,6 +5,7 @@
 
 int main()
 {
-	std::cout << "Hello CMake." << std::endl;
+	std::cout << "Day 01A: " << Day1::A() << "\n";
+	std::cout << "Day 01B: " << Day1::B() << "\n";
 	return 0;
 }

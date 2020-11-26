@@ -1,8 +1,8 @@
-﻿// AoC2020.h : Include file for standard system include files,
-// or project specific include files.
-
-#pragma once
+﻿#ifndef AoC2020_H
+#define AoC2020_H
 
 #include <iostream>
 
-// TODO: Reference additional headers your program requires here.
+#include "Day1/Day1.h"
+
+#endif
