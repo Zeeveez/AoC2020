@@ -5,7 +5,9 @@
 
 int main()
 {
-	std::cout << "Day 01A: " << Day1::A() << "\n";
-	std::cout << "Day 01B: " << Day1::B() << "\n";
+	std::cout << "Day 01A: " << Day1::A(Day1::input) << "\n";
+	std::cout << "Day 01B: " << Day1::B(Day1::input) << "\n";
+	std::cout << "Day 02A: " << Day2::A(Day2::input) << "\n";
+	std::cout << "Day 02B: " << Day2::B(Day2::input) << "\n";
 	return 0;
 }

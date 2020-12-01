@@ -1,8 +1,9 @@
-﻿#ifndef AoC2020_H
-#define AoC2020_H
+﻿#ifndef AOC2020_H
+#define AOC2020_H
 
 #include <iostream>
 
 #include "Day1/Day1.h"
+#include "Day2/Day2.h"
 
 #endif
