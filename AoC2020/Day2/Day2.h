@@ -2,12 +2,13 @@
 #define DAY2_H
 
 #include <vector>
+#include <string>
 
 namespace Day2 {
-    extern std::vector<int> input;
+    extern std::vector<std::string> input;
 
-    int A(std::vector<int> input);
-    int B(std::vector<int> input);
+    int A(std::vector<std::string> input);
+    int B(std::vector<std::string> input);
 }
 
 #endif
