@@ -7,6 +7,6 @@
     - Find product of 3 numbers in list which sum to 2020
 - Day 2
   - A
-    - xxxxxxxxxxxxxx
+    - Count valid passwords, format of each line "a-b c: x" where a is minimum count of c in x and b is the maximum count of c in x 
   - B
-    - xxxxxxxxxxxxxx
+    - Count valid passwords, format of each line "a-b c: x" where x[a] ^ x[b] must hold
