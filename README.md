@@ -9,4 +9,4 @@
   - A
     - Count valid passwords, format of each line "a-b c: x" where a is minimum count of c in x and b is the maximum count of c in x 
   - B
-    - Count valid passwords, format of each line "a-b c: x" where x[a] ^ x[b] must hold
+    - Count valid passwords, format of each line "a-b c: x" where (x[a] == c) ^ (x[b] == c) must hold
