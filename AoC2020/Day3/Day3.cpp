@@ -17,8 +17,8 @@ namespace Day3 {
 
     long long A(std::vector<std::string> input, int xSlope, int ySlope) {
         auto trees = ParseInput(input);
-        int x = 0;
-        int y = 0;
+        size_t x = 0;
+        size_t y = 0;
         int treeCount = 0;
         while (y < trees.size()) {
             if (trees[y][x]) {
