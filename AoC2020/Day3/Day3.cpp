@@ -1,5 +1,4 @@
 #include "Day3.h"
-#include <iostream>
 
 namespace Day3 {
     std::vector<std::string> input = {
