@@ -1,6 +1,5 @@
 #include "Day4.h"
 #include "../Helpers/Helpers.h"
-#include <map>
 #include <regex>
 
 namespace Day4 {
