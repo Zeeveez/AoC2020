@@ -1,8 +1,8 @@
-#include "Day3.h"
+#include "Day03.h"
 #include "../Helpers/Helpers.h"
 
-namespace Day3 {
-    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day3Input.txt");
+namespace Day03 {
+    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day03Input.txt");
 
     std::vector<std::vector<bool>> ParseInput(std::vector<std::string> input) {
         std::vector<std::vector<bool>> trees = {};

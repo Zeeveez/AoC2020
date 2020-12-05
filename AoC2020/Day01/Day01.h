@@ -1,9 +1,9 @@
-#ifndef DAY1_H
-#define DAY1_H
+#ifndef DAY01_H
+#define DAY01_H
 
 #include <vector>
 
-namespace Day1 {
+namespace Day01 {
     extern std::vector<int> input;
 
     int A(std::vector<int> input);

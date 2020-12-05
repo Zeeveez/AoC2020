@@ -1,9 +1,9 @@
-#include "Day4.h"
+#include "Day04.h"
 #include "../Helpers/Helpers.h"
 #include <regex>
 
-namespace Day4 {
-    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day4Input.txt");
+namespace Day04 {
+    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day04Input.txt");
 
     std::map<std::string, std::string> ParsePassport(std::string passport) {
         std::map<std::string, std::string> data = {};

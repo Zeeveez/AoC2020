@@ -1,11 +1,11 @@
-#ifndef DAY4_H
-#define DAY4_H
+#ifndef DAY04_H
+#define DAY04_H
 
 #include <vector>
 #include <string>
 #include <map>
 
-namespace Day4 {
+namespace Day04 {
     extern std::vector<std::string> input;
 
     std::map<std::string, std::string> ParsePassport(std::string passport);

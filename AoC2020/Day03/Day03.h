@@ -1,10 +1,10 @@
-#ifndef DAY3_H
-#define DAY3_H
+#ifndef DAY03_H
+#define DAY03_H
 
 #include <vector>
 #include <string>
 
-namespace Day3 {
+namespace Day03 {
     extern std::vector<std::string> input;
 
     std::vector<std::vector<bool>> ParseInput(std::vector<std::string> input);

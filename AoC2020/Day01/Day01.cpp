@@ -1,8 +1,8 @@
-#include "Day1.h"
+#include "Day01.h"
 #include "../Helpers/Helpers.h"
 
-namespace Day1 {
-    std::vector<int> input = Helpers::ReadAllLines<int>("./Day1Input.txt");
+namespace Day01 {
+    std::vector<int> input = Helpers::ReadAllLines<int>("./Day01Input.txt");
 
     int A(std::vector<int> input) {
         for (auto& a : input) {

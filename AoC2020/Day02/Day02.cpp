@@ -1,8 +1,8 @@
-#include "Day2.h"
+#include "Day02.h"
 #include "../Helpers/Helpers.h"
 
-namespace Day2 {
-    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day2Input.txt");
+namespace Day02 {
+    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day02Input.txt");
 
     int A(std::vector<std::string> input) {
         int valid = 0;

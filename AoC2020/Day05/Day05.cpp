@@ -1,8 +1,8 @@
-#include "Day5.h"
+#include "Day05.h"
 #include "../Helpers/Helpers.h"
 
-namespace Day5 {
-    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day5Input.txt");
+namespace Day05 {
+    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day05Input.txt");
 
     std::set<int> GetSeatIDs(std::vector<std::string> input) {
         std::set<int> seatIDs = {};
