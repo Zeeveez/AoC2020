@@ -14,4 +14,5 @@ configure_file("Day02/Day02Input.txt" "" COPYONLY)
 configure_file("Day03/Day03Input.txt" "" COPYONLY)
 configure_file("Day04/Day04Input.txt" "" COPYONLY)
 configure_file("Day05/Day05Input.txt" "" COPYONLY)
+configure_file("Day06/Day06Input.txt" "" COPYONLY)
 # TODO: Add tests and install targets if needed.
