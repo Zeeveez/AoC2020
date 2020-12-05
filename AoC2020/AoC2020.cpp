@@ -15,5 +15,7 @@ int main()
 	std::cout << "Day 04B: " << Day04::B(Day04::input) << "\n";
 	std::cout << "Day 05A: " << Day05::A(Day05::input) << "\n";
 	std::cout << "Day 05B: " << Day05::B(Day05::input) << "\n";
+	std::cout << "Day 06A: " << Day06::A(Day06::input) << "\n";
+	std::cout << "Day 06B: " << Day06::B(Day06::input) << "\n";
 	return 0;
 }
