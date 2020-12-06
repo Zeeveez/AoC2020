@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
 add_executable (AoC2020 "AoC2020.cpp" "AoC2020.h" "Helpers/Helpers.cpp" "Helpers/Helpers.h" "Day01/Day01.cpp" "Day01/Day01.h" "Day02/Day02.cpp" "Day02/Day02.h" "Day03/Day03.cpp" "Day03/Day03.h" "Day04/Day04.cpp" "Day04/Day04.h" "Day05/Day05.cpp" "Day05/Day05.h" "Day06/Day06.cpp" "Day06/Day06.h")
-set_property(TARGET AoC2020 PROPERTY CXX_STANDARD 17)
+set_property(TARGET AoC2020 PROPERTY CXX_STANDARD 20)
 set_property(TARGET AoC2020 PROPERTY CXX_STANDARD_REQUIRED ON)
 
 # Copy needed files

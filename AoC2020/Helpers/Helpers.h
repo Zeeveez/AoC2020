@@ -21,6 +21,8 @@ namespace Helpers {
         f.close();
         return lines;
     }
+
+    std::vector<std::vector<std::string>> SeparateDatasets(std::vector<std::string> input);
 }
 
 #endif
