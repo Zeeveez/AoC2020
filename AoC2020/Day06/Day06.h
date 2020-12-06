@@ -7,6 +7,8 @@
 namespace Day06 {
     extern std::vector<std::string> input;
 
+    std::vector<std::string> GetGroups(std::vector<std::string> input);
+
     int A(std::vector<std::string> input);
     int B(std::vector<std::string> input);
 }
