@@ -16,10 +16,10 @@ namespace Day07 {
             std::sregex_iterator end;
             std::smatch matches;
 
-            std::string bag = (*iter++)[2];
-            data.insert({ bag, {} });
+            std::string bagMatch = (*iter++)[2];
+            data.insert({ bagMatch, {} });
             while (iter != end) {
-                data[bag].push_back({ (*iter)[2], std::stoi((*iter)[1]) });
+                data[bagMatch].push_back({ (*iter)[2], std::stoi((*iter)[1]) });
                 iter++;
             }
         }
