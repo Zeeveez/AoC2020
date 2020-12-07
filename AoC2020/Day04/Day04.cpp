@@ -15,9 +15,7 @@ namespace Day04 {
         std::smatch matches;
 
         while (iter != end) {
-            for (int i = 1; i < iter->size(); i++) {
-                data.insert({ (*iter)[1], (*iter)[2] });
-            }
+            data.insert({ (*iter)[1], (*iter)[2] });
             iter++;
         }
         return data;
