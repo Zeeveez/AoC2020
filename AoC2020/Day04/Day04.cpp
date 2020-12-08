@@ -12,8 +12,6 @@ namespace Day04 {
         std::sregex_iterator iter(passport.begin(), passport.end(), parseRegex);
         std::sregex_iterator end;
 
-        std::smatch matches;
-
         while (iter != end) {
             data.insert({ (*iter)[1], (*iter)[2] });
             iter++;

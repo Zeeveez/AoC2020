@@ -9,7 +9,7 @@ namespace Day07 {
 
     std::map<std::string, std::vector<std::tuple<std::string, int>>> ParseBags(std::vector<std::string> input) {
         std::map<std::string, std::vector<std::tuple<std::string, int>>> data = {};
-        std::regex parseRegex("(\\d+)? ?([a-z ]+) bags?");
+        std::regex parseRegex("(\\d+)?\\s?([a-z\\s]+) bags?");
 
         for (auto& bag : input) {
             std::sregex_iterator iter(bag.begin(), bag.end(), parseRegex);
