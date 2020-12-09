@@ -1,4 +1,4 @@
-Link: https://adventofcode.com/2020/day/8
+Link: https://adventofcode.com/2020/day/9
 Author: Eric Wastl (@ericwastl) (2020)
 
 --- Day 9: Encoding Error ---
