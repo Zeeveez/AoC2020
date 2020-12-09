@@ -16,6 +16,8 @@ namespace Helpers {
                 lines.push_back(line);
             } else if constexpr (std::is_same<T, int>::value) {
                 lines.push_back(std::stoi(line));
+            } else if constexpr (std::is_same<T, long long>::value) {
+                lines.push_back(std::stoll(line));
             }
         }
         f.close();

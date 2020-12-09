@@ -11,5 +11,6 @@
 #include "Day06/Day06.h"
 #include "Day07/Day07.h"
 #include "Day08/Day08.h"
+#include "Day09/Day09.h"
 
 #endif
