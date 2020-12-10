@@ -3,6 +3,7 @@
 
 #include <deque>
 #include <algorithm>
+#include <climits>
 
 namespace Day09 {
     std::vector<long long> input = Helpers::ReadAllLines<long long>("./Day09Input.txt");
