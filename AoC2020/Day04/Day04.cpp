@@ -3,11 +3,15 @@
 #include <regex>
 
 namespace Day04 {
-    std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day04Input.txt");
+    std::vector<std::vector<std::string>> input = Helpers::SeparateDatasets(Helpers::ReadAllLines<std::string>("./Day04Input.txt"));
 
-    std::map<std::string, std::string> ParsePassport(std::string passport) {
+    std::map<std::string, std::string> ParsePassport(std::vector<std::string> passportLines) {
+        std::string passport = "";
+        for (auto& line : passportLines) {
+            passport += " " + line;
+        }
         std::map<std::string, std::string> data = {};
-        std::regex parseRegex("(\\w+):(#?\\w+)\\s");
+        std::regex parseRegex("(\\w+):(#?\\w+)");
 
         std::sregex_iterator iter(passport.begin(), passport.end(), parseRegex);
         std::sregex_iterator end;
@@ -19,7 +23,7 @@ namespace Day04 {
         return data;
     }
 
-    std::vector<std::map<std::string, std::string>> ParseAllPassports(std::vector<std::string> input) {
+    std::vector<std::map<std::string, std::string>> ParseAllPassports(std::vector<std::vector<std::string>> input) {
         std::vector<std::string> required = {
             "byr",
             "iyr",
@@ -30,30 +34,25 @@ namespace Day04 {
             "pid"
         };
         std::vector<std::map<std::string, std::string>> passports = {};
-        std::string currentPassport;
-        for (auto& line : input) {
-            currentPassport += " " + line;
-            if (line.length() == 0) {
-                auto passport = ParsePassport(currentPassport);
-                bool valid = true;
-                for (auto& requirement : required) {
-                    if (passport.count(requirement) == 0) {
-                        valid = false;
-                        break;
-                    }
+        for (auto& currentPassport : input) {
+            auto passport = ParsePassport(currentPassport);
+            bool valid = true;
+            for (auto& requirement : required) {
+                if (passport.count(requirement) == 0) {
+                    valid = false;
+                    break;
                 }
-                if (valid) { passports.push_back(passport); }
-                currentPassport = "";
             }
+            if (valid) { passports.push_back(passport); }
         }
         return passports;
     }
 
-    int A(std::vector<std::string> input) {
+    int A(std::vector<std::vector<std::string>> input) {
         return ParseAllPassports(input).size();
     }
 
-    int B(std::vector<std::string> input) {
+    int B(std::vector<std::vector<std::string>> input) {
         auto passports = ParseAllPassports(input);
         int valid = 0;
         for (auto& passport : passports) {

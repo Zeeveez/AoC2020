@@ -6,13 +6,13 @@
 #include <map>
 
 namespace Day04 {
-    extern std::vector<std::string> input;
+    extern std::vector<std::vector<std::string>> input;
 
     std::map<std::string, std::string> ParsePassport(std::string passport);
-    std::vector<std::map<std::string, std::string>> ParseAllPassports(std::vector<std::string> input);
+    std::vector<std::map<std::string, std::string>> ParseAllPassports(std::vector<std::vector<std::string>> input);
 
-    int A(std::vector<std::string> input);
-    int B(std::vector<std::string> input);
+    int A(std::vector<std::vector<std::string>> input);
+    int B(std::vector<std::vector<std::string>> input);
 }
 
 #endif
