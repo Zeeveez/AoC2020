@@ -2,6 +2,7 @@
 #include "../Helpers/Helpers.h"
 
 #include <iostream>
+#include <map>
 
 namespace Day11 {
     std::vector<std::string> input = Helpers::ReadAllLines<std::string>("./Day11Input.txt");
@@ -40,41 +41,23 @@ namespace Day11 {
     }
 
     int CountNeighboursB(std::vector<std::vector<Seat>>& seats, int x, int y) {
+        std::map<int, std::pair<int, int>> dirs = {
+            { 0, { 1, 0 } },
+            { 1, { 1, 1 } },
+            { 2, { 0, 1 } },
+            { 3, { -1, 1 } },
+            { 4, { -1, 0 } },
+            { 5, { -1, -1 } },
+            { 6, { 0, -1 } },
+            { 7, { 1, -1 } }
+        };
         int taken = 0;
         for (int dir = 0; dir < 8; dir++) {
             int dx = 0;
             int dy = 0;
             do {
-                switch (dir) {
-                case 0:
-                    dx++;
-                    break;
-                case 1:
-                    dx++;
-                    dy++;
-                    break;
-                case 2:
-                    dy++;
-                    break;
-                case 3:
-                    dx--;
-                    dy++;
-                    break;
-                case 4:
-                    dx--;
-                    break;
-                case 5:
-                    dx--;
-                    dy--;
-                    break;
-                case 6:
-                    dy--;
-                    break;
-                case 7:
-                    dx++;
-                    dy--;
-                    break;
-                }
+                dx += dirs[dir].first;
+                dy += dirs[dir].second;
             } while (x + dx > -1 && x + dx < seats.size() && y + dy > -1 && y + dy < seats[x + dx].size() && seats[x + dx][y + dy] == Seat::NONE);
 
             if (x + dx > -1 && x + dx < seats.size() && y + dy > -1 && y + dy < seats[x + dx].size() && seats[x + dx][y + dy] == Seat::TAKEN) {
