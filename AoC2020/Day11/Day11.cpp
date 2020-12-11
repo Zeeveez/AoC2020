@@ -41,15 +41,15 @@ namespace Day11 {
     }
 
     int CountNeighboursB(std::vector<std::vector<Seat>>& seats, int x, int y) {
-        std::map<int, std::pair<int, int>> dirs = {
-            { 0, { 1, 0 } },
-            { 1, { 1, 1 } },
-            { 2, { 0, 1 } },
-            { 3, { -1, 1 } },
-            { 4, { -1, 0 } },
-            { 5, { -1, -1 } },
-            { 6, { 0, -1 } },
-            { 7, { 1, -1 } }
+        static const std::vector<std::pair<int, int>> dirs = {
+            { 1, 0 },
+            { 1, 1 },
+            { 0, 1 },
+            { -1, 1 },
+            { -1, 0 },
+            { -1, -1 },
+            { 0, -1 },
+            { 1, -1 }
         };
         int taken = 0;
         for (int dir = 0; dir < 8; dir++) {
@@ -69,36 +69,31 @@ namespace Day11 {
 
     std::pair<std::vector<std::vector<Seat>>, bool> IterateSeats(std::vector<std::vector<Seat>> seats, int maxTaken, std::function<int(std::vector<std::vector<Seat>>&, int, int)> countMethod) {
         std::vector<std::vector<Seat>> newSeats = seats;
+        bool changed = false;
         for (int x = 0; x < seats.size(); x++) {
             for (int y = 0; y < seats[x].size(); y++) {
                 if (seats[x][y] != Seat::NONE) {
                     int taken = countMethod(seats, x, y);
                     if (taken == 0) {
                         newSeats[x][y] = Seat::TAKEN;
+                        changed = changed ? changed : seats[x][y] != newSeats[x][y];
                     } else if (taken >= maxTaken) {
                         newSeats[x][y] = Seat::EMPTY;
+                        changed = changed ? changed : seats[x][y] != newSeats[x][y];
                     }
                 }
             }
         }
-
-        for (int x = 0; x < seats.size(); x++) {
-            for (int y = 0; y < seats[x].size(); y++) {
-                if (seats[x][y] != newSeats[x][y]) {
-                    return { newSeats, false };
-                }
-            }
-        }
-        return { newSeats, true };
+        return { newSeats, changed };
     }
 
     long long Run(std::vector<std::string> input, int maxTaken, std::function<int(std::vector<std::vector<Seat>>&, int, int)> countMethod) {
         auto seats = InputToSeats(input);
-        bool stable = false;
-        while (!stable) {
-            auto [newSeats, newStable] = IterateSeats(seats, maxTaken, countMethod);
+        bool changed = true;
+        while (changed) {
+            auto [newSeats, newChanged] = IterateSeats(seats, maxTaken, countMethod);
             seats = std::move(newSeats);
-            stable = newStable;
+            changed = newChanged;
         }
 
         long long taken = 0;
