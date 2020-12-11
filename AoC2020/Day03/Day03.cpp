@@ -9,7 +9,7 @@ namespace Day03 {
         for (auto& row : input) {
             trees.push_back({});
             for (auto& cell : row) {
-                trees[trees.size() - 1].push_back(cell == '#');
+                trees.back().push_back(cell == '#');
             }
         }
         return trees;

@@ -14,10 +14,10 @@ namespace Day11 {
             for (auto& seat : row) {
                 switch (seat) {
                 case '.':
-                    seats[seats.size() - 1].push_back(Seat::NONE);
+                    seats.back().push_back(Seat::NONE);
                     break;
                 case 'L':
-                    seats[seats.size() - 1].push_back(Seat::EMPTY);
+                    seats.back().push_back(Seat::EMPTY);
                     break;
                 }
             }

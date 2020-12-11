@@ -11,7 +11,7 @@ namespace Day10 {
     long long A(std::vector<long long> input) {
         input.push_back(0);
         std::sort(input.begin(), input.end());
-        input.push_back(input[input.size() - 1] + 3);
+        input.push_back(input.back() + 3);
         long long joltDiff1 = 0;
         long long joltDiff3 = 0;
         for (size_t i = 1; i < input.size(); i++) {
@@ -31,7 +31,7 @@ namespace Day10 {
             if (input[i + 1] - input[i] == 3) {
                 data.push_back({});
             }
-            data[data.size() - 1].push_back(input[i + 1]);
+            data.back().push_back(input[i + 1]);
         }
         return data;
     }
@@ -47,7 +47,7 @@ namespace Day10 {
     long long B(std::vector<long long> input) {
         input.push_back(0);
         std::sort(input.begin(), input.end());
-        input.push_back(input[input.size() - 1] + 3);
+        input.push_back(input.back() + 3);
         auto data = GroupDatasets(input);
         auto solutions = GroupsToSolutions(data);
         return std::accumulate(solutions.begin(), solutions.end(), (long long)1, std::multiplies<long long>());
