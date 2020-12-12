@@ -24,8 +24,8 @@ namespace Day12 {
             { (int)('W'), { -1, 0 } }
         };
 
+        std::regex parseRegex("([NESWLRF])(\\d+)");
         for (auto& ins : input) {
-            std::regex parseRegex("([NESWLRF])(\\d+)");
             std::sregex_iterator iter(ins.begin(), ins.end(), parseRegex);
             char dir = (*iter)[1].str()[0];
             int val = std::stoi((*iter)[2]);
@@ -67,8 +67,8 @@ namespace Day12 {
             { 270, [](int x, int y) -> std::pair<int,int> { return { y, -x }; } }
         };
 
+        std::regex parseRegex("([NESWLRF])(\\d+)");
         for (auto& ins : input) {
-            std::regex parseRegex("([NESWLRF])(\\d+)");
             std::sregex_iterator iter(ins.begin(), ins.end(), parseRegex);
             char dir = (*iter)[1].str()[0];
             int val = std::stoi((*iter)[2]);
