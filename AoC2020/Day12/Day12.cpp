@@ -1,7 +1,6 @@
 #include "Day12.h"
 #include "../Helpers/Helpers.h"
 
-#include <iostream>
 #include <unordered_map>
 #include <regex>
 #include <functional>
